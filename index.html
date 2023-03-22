@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--Tailwind CSS Code-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.tailwindcss.com/v3.2.7/tailwind.min.css"
+    />
+
+    <!--Font Awesome code-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="src/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPT Webby - Website Builder</title>
+  </head>
+  <body>
+    <main class="document-root"></main>
+    <form id="chatform">
+      <section class="chatbox fixed bottom-0 flex justify-center">
+        <input
+          size="100"
+          class="border-solid border-2 w-full bottom-0"
+          type="text"
+          autocomplete="none"
+        />
+        <div class="load-icon">
+          <svg
+            style="width: 20px; height: 20px"
+            class="animate-spin h-24 w-24 text-indigo-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+        </div>
+
+        <button class="border-solid border-2 border-gray-800 p-2">
+          <i class="fa-solid fa-play"></i>
+        </button>
+      </section>
+    </form>
+    <dialog
+      id="modalBox"
+      class="fixed inset-0 z-50 overflow-y-auto direction-column"
+    >
+      <form id="modalForm">
+        <label for="apiBox" class="block">Enter your OpenAI API Key</label>
+        <div>
+          Note: If you haven't already, create an
+          <a href="https://platform.openai.com">OpenAI</a> account to get
+          started.
+        </div>
+        <input
+          type="text"
+          class="border-solid border-2"
+          autocomplete="off"
+          autofocus="on"
+        />
+        <button onclick="modalBox.close()" class="absolute right-0 top-0">
+          x
+        </button>
+      </form>
+    </dialog>
+  </body>
+</html>

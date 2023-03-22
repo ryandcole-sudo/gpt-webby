@@ -1,0 +1,10 @@
+.load-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  z-index: 2;
+  right: 40px;
+  top: 10px;
+  border-radius: 50%;
+}
